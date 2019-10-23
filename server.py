@@ -32,6 +32,7 @@ def bind_socket():
         print(f"Listinig for connection on port {port}...\n")
     except socket.error as msg:
         print(f"Failed to bind socket {msg}.\n")
+        bind_socket()
 
 #accepting connections
 def accept_socket():
